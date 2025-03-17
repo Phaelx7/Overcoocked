@@ -7,9 +7,21 @@ public class Player : MonoBehaviour
     [SerializeField] private GameInput gameInput;
     private bool isWalking;
 
+    void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+    }
+    void GameInput_OnInteractAction(object sender, System.EventArgs e)
+    {
+        throw new System.NotImplementedException();
+    }
     void Update()
     {
         Movement();
+    }
+    void Interactions() //Metodo de interacao
+    {
+
     }
     void Movement() //Metodo de movimentacao
     {
